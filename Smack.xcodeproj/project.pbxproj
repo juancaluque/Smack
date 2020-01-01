@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A41703D623BCFD7B009A11EC /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41703D523BCFD7B009A11EC /* CreateAccountVC.swift */; };
 		A48CEA3623B9946E0070F0AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48CEA3523B9946E0070F0AB /* AppDelegate.swift */; };
 		A48CEA3823B9946E0070F0AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48CEA3723B9946E0070F0AB /* SceneDelegate.swift */; };
 		A48CEA3D23B9946E0070F0AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A48CEA3B23B9946E0070F0AB /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		172EC0C9DB3328D3B9BF9ACC /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F4EB788687937F34157A357 /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
+		A41703D523BCFD7B009A11EC /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		A48CEA3223B9946E0070F0AB /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48CEA3523B9946E0070F0AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A48CEA3723B9946E0070F0AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				A4F7F62123BA9ADA00560028 /* ChatVC.swift */,
 				A4F7F62323BA9AED00560028 /* ChannelVC.swift */,
 				A4F1A9B423BB99760092DB09 /* LogInVC.swift */,
+				A41703D523BCFD7B009A11EC /* CreateAccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				A4F1A9B523BB99760092DB09 /* LogInVC.swift in Sources */,
 				A4F7F62623BAA26900560028 /* GradientView.swift in Sources */,
 				A48CEA3823B9946E0070F0AB /* SceneDelegate.swift in Sources */,
+				A41703D623BCFD7B009A11EC /* CreateAccountVC.swift in Sources */,
 				A4F1A9B323BB95330092DB09 /* Constants.swift in Sources */,
 				A48CED5E23BA6EFE0050A1A5 /* SWRevealViewController.m in Sources */,
 				A4F7F62423BA9AED00560028 /* ChannelVC.swift in Sources */,
