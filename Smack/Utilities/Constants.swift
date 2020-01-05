@@ -22,12 +22,11 @@ let TO_CREATE_ACCOUNT = "toCreateAccountVC"
 let UNWIND = "unwindToChannel"
 
 //User Defaults
-
 let TOKEN_KEY = "token"
 let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
 
-//header
+//Header
 let HEADER =  [
     "Conten-Type": "application/json; charset=utf-8"
 ]

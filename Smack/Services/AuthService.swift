@@ -87,8 +87,6 @@ class AuthService {
 //                self.userEmail = json["user"].stringValue
 //                self.authToken = json["toke"].stringValue
                 
-                
-                
                 self.isLoggedIn = true
                 completion(true)
             } else {
