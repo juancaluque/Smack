@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		A40B7D8023C3B8C700F7BD83 /* TestAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B7D7F23C3B8C700F7BD83 /* TestAuthService.swift */; };
 		A40B7D8223C4F9B000F7BD83 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B7D8123C4F9B000F7BD83 /* UserDataService.swift */; };
+		A40B7D8423C62D5600F7BD83 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B7D8323C62D5600F7BD83 /* AvatarPickerVC.swift */; };
+		A40B7D8623C62F6100F7BD83 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B7D8523C62F6100F7BD83 /* AvatarCell.swift */; };
 		A41703D623BCFD7B009A11EC /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41703D523BCFD7B009A11EC /* CreateAccountVC.swift */; };
 		A48CEA3623B9946E0070F0AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48CEA3523B9946E0070F0AB /* AppDelegate.swift */; };
 		A48CEA3823B9946E0070F0AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48CEA3723B9946E0070F0AB /* SceneDelegate.swift */; };
@@ -31,6 +33,8 @@
 		4F4EB788687937F34157A357 /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
 		A40B7D7F23C3B8C700F7BD83 /* TestAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestAuthService.swift; sourceTree = "<group>"; };
 		A40B7D8123C4F9B000F7BD83 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		A40B7D8323C62D5600F7BD83 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
+		A40B7D8523C62F6100F7BD83 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		A41703D523BCFD7B009A11EC /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		A48CEA3223B9946E0070F0AB /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48CEA3523B9946E0070F0AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 				A4F7F62323BA9AED00560028 /* ChannelVC.swift */,
 				A4F1A9B423BB99760092DB09 /* LogInVC.swift */,
 				A41703D523BCFD7B009A11EC /* CreateAccountVC.swift */,
+				A40B7D8323C62D5600F7BD83 /* AvatarPickerVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			children = (
 				A4F7F62523BAA26900560028 /* GradientView.swift */,
 				A4A5C44B23BFE3C800E7DC06 /* RoundedButton.swift */,
+				A40B7D8523C62F6100F7BD83 /* AvatarCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -293,6 +299,7 @@
 				A40B7D8223C4F9B000F7BD83 /* UserDataService.swift in Sources */,
 				A48CEA3623B9946E0070F0AB /* AppDelegate.swift in Sources */,
 				A4F1A9B523BB99760092DB09 /* LogInVC.swift in Sources */,
+				A40B7D8623C62F6100F7BD83 /* AvatarCell.swift in Sources */,
 				A4F7F62623BAA26900560028 /* GradientView.swift in Sources */,
 				A48CEA3823B9946E0070F0AB /* SceneDelegate.swift in Sources */,
 				A41703D623BCFD7B009A11EC /* CreateAccountVC.swift in Sources */,
@@ -300,6 +307,7 @@
 				A40B7D8023C3B8C700F7BD83 /* TestAuthService.swift in Sources */,
 				A4A5C44A23BE681700E7DC06 /* AuthService.swift in Sources */,
 				A4F1A9B323BB95330092DB09 /* Constants.swift in Sources */,
+				A40B7D8423C62D5600F7BD83 /* AvatarPickerVC.swift in Sources */,
 				A48CED5E23BA6EFE0050A1A5 /* SWRevealViewController.m in Sources */,
 				A4F7F62423BA9AED00560028 /* ChannelVC.swift in Sources */,
 			);
