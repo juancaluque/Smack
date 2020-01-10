@@ -106,7 +106,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="dze-Ys-ZeB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="dze-Ys-ZeB" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="24" y="787" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="9iQ-Da-6ot"/>
@@ -416,7 +416,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="9qf-Wm-NuE">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="9qf-Wm-NuE" customClass="CircleImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="157" y="403" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="exI-3P-3V2"/>
@@ -448,14 +448,20 @@
                                     <action selector="pickBgColorPressed:" destination="h1P-rw-PWA" eventType="touchUpInside" id="g1D-4y-YbA"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="UL6-Pd-sz2">
+                                <rect key="frame" x="188.5" y="302.5" width="37" height="37"/>
+                                <color key="color" red="0.2901960784" green="0.30196078430000001" blue="0.84705882349999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="UL6-Pd-sz2" firstAttribute="centerX" secondItem="HDg-FE-ALg" secondAttribute="centerX" id="1yJ-Na-7re"/>
                             <constraint firstItem="5eq-xp-0PA" firstAttribute="top" secondItem="3Oj-uq-hZj" secondAttribute="bottom" constant="60" id="CUg-rM-Mq0"/>
                             <constraint firstItem="D0S-tf-olF" firstAttribute="bottom" secondItem="6fZ-Yx-qdR" secondAttribute="bottom" constant="20" id="ExS-7Z-AiQ"/>
                             <constraint firstItem="3Oj-uq-hZj" firstAttribute="top" secondItem="D0S-tf-olF" secondAttribute="top" constant="40" id="HRM-9o-g42"/>
                             <constraint firstItem="eaD-2w-eHf" firstAttribute="centerX" secondItem="HDg-FE-ALg" secondAttribute="centerX" id="LgH-km-dtp"/>
                             <constraint firstItem="5eq-xp-0PA" firstAttribute="centerX" secondItem="HDg-FE-ALg" secondAttribute="centerX" id="MY8-FJ-OiL"/>
+                            <constraint firstItem="UL6-Pd-sz2" firstAttribute="centerY" secondItem="HDg-FE-ALg" secondAttribute="centerY" constant="-100" id="NHJ-hc-5UO"/>
                             <constraint firstItem="9qf-Wm-NuE" firstAttribute="top" secondItem="5eq-xp-0PA" secondAttribute="bottom" constant="40" id="T79-bK-heD"/>
                             <constraint firstItem="eaD-2w-eHf" firstAttribute="top" secondItem="9qf-Wm-NuE" secondAttribute="top" id="VeS-sW-HLd"/>
                             <constraint firstItem="6fZ-Yx-qdR" firstAttribute="centerX" secondItem="HDg-FE-ALg" secondAttribute="centerX" id="Y8E-2x-wVo"/>
@@ -473,6 +479,7 @@
                     <connections>
                         <outlet property="emailTxt" destination="dZ9-DY-Gug" id="GLj-IA-aPY"/>
                         <outlet property="passTxt" destination="qMQ-ui-9Bd" id="KTO-lI-iJB"/>
+                        <outlet property="spinner" destination="UL6-Pd-sz2" id="Ekb-ZF-VXd"/>
                         <outlet property="userImage" destination="9qf-Wm-NuE" id="dAS-sT-iTA"/>
                         <outlet property="userNameTxt" destination="e8I-m7-bGg" id="bLg-8e-U2Y"/>
                         <segue destination="LoQ-px-usL" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForUnwindWithSegue:" id="RFd-jX-u9U"/>
@@ -482,7 +489,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h54-hL-nGU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="LoQ-px-usL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2383" y="-135"/>
+            <point key="canvasLocation" x="2382.608695652174" y="-135.26785714285714"/>
         </scene>
         <!--Avatar PickerVC-->
         <scene sceneID="aEP-YO-QRt">

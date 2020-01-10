@@ -12,6 +12,7 @@
 		A40B7D8423C62D5600F7BD83 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B7D8323C62D5600F7BD83 /* AvatarPickerVC.swift */; };
 		A40B7D8623C62F6100F7BD83 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B7D8523C62F6100F7BD83 /* AvatarCell.swift */; };
 		A41703D623BCFD7B009A11EC /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41703D523BCFD7B009A11EC /* CreateAccountVC.swift */; };
+		A444D57D23C8BDB10029E43A /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A444D57C23C8BDB10029E43A /* CircleImage.swift */; };
 		A47A24A423C8275E00A59FA9 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47A24A323C8275E00A59FA9 /* Delegate.swift */; };
 		A48CEA3623B9946E0070F0AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48CEA3523B9946E0070F0AB /* AppDelegate.swift */; };
 		A48CEA3823B9946E0070F0AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48CEA3723B9946E0070F0AB /* SceneDelegate.swift */; };
@@ -37,6 +38,7 @@
 		A40B7D8323C62D5600F7BD83 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		A40B7D8523C62F6100F7BD83 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		A41703D523BCFD7B009A11EC /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		A444D57C23C8BDB10029E43A /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		A47A24A323C8275E00A59FA9 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		A48CEA3223B9946E0070F0AB /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48CEA3523B9946E0070F0AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				A4F7F62523BAA26900560028 /* GradientView.swift */,
 				A4A5C44B23BFE3C800E7DC06 /* RoundedButton.swift */,
 				A40B7D8523C62F6100F7BD83 /* AvatarCell.swift */,
+				A444D57C23C8BDB10029E43A /* CircleImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				A4A5C44A23BE681700E7DC06 /* AuthService.swift in Sources */,
 				A4F1A9B323BB95330092DB09 /* Constants.swift in Sources */,
 				A40B7D8423C62D5600F7BD83 /* AvatarPickerVC.swift in Sources */,
+				A444D57D23C8BDB10029E43A /* CircleImage.swift in Sources */,
 				A48CED5E23BA6EFE0050A1A5 /* SWRevealViewController.m in Sources */,
 				A4F7F62423BA9AED00560028 /* ChannelVC.swift in Sources */,
 			);
