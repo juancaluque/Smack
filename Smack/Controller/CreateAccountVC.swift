@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CreateAccountVC: UIViewController {
+class CreateAccountVC: UIViewController, AvatarTransfer {
 
     //Outlets
     @IBOutlet weak var userNameTxt: UITextField!
@@ -26,12 +26,12 @@ class CreateAccountVC: UIViewController {
         super.viewDidLoad()
     }
 
-    override func viewDidAppear(_ animated: Bool) {
-        if UserDataService.instance.avatarName != "" {
-            userImage.image = UIImage(named: UserDataService.instance.avatarName)
-            avatarName = UserDataService.instance.avatarName
-        }
-    }
+//    override func viewDidAppear(_ animated: Bool) {
+//        if UserDataService.instance.avatarName != "" {
+//            userImage.image = UIImage(named: UserDataService.instance.avatarName)
+//            avatarName = UserDataService.instance.avatarName
+//        }
+//    }
     
     @IBAction func createAccountPressed(_ sender: Any) {
         
@@ -51,6 +51,20 @@ class CreateAccountVC: UIViewController {
                     }
                 }
             }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == TO_AVATAR_PICKER {
+            guard let avatarPicker = segue.destination as? AvatarPickerVC else { return }
+            avatarPicker.delegate = self
+        }
+    }
+    
+    func updateAvatarName(avatarName: String) {
+        if UserDataService.instance.avatarName != "" {
+            userImage.image = UIImage(named: UserDataService.instance.avatarName)
+            self.avatarName = UserDataService.instance.avatarName
         }
     }
     

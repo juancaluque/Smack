@@ -16,6 +16,7 @@ class AvatarPickerVC: UIViewController,UICollectionViewDelegate, UICollectionVie
     
     //Variables
     var avatarType = AvatarType.dark
+    var delegate: AvatarTransfer? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,8 +67,14 @@ class AvatarPickerVC: UIViewController,UICollectionViewDelegate, UICollectionVie
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if avatarType == .dark{
             UserDataService.instance.setAvatarName(avatarName: "dark\(indexPath.item)")
+            if delegate != nil{
+                delegate?.updateAvatarName(avatarName: UserDataService.instance.avatarName)
+            }
         } else {
             UserDataService.instance.setAvatarName(avatarName: "light\(indexPath.item)")
+            if delegate != nil{
+                delegate?.updateAvatarName(avatarName: UserDataService.instance.avatarName)
+            }
         }
         self.dismiss(animated: true, completion: nil)
     }

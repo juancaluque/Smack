@@ -12,6 +12,7 @@
 		A40B7D8423C62D5600F7BD83 /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B7D8323C62D5600F7BD83 /* AvatarPickerVC.swift */; };
 		A40B7D8623C62F6100F7BD83 /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B7D8523C62F6100F7BD83 /* AvatarCell.swift */; };
 		A41703D623BCFD7B009A11EC /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41703D523BCFD7B009A11EC /* CreateAccountVC.swift */; };
+		A47A24A423C8275E00A59FA9 /* Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47A24A323C8275E00A59FA9 /* Delegate.swift */; };
 		A48CEA3623B9946E0070F0AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48CEA3523B9946E0070F0AB /* AppDelegate.swift */; };
 		A48CEA3823B9946E0070F0AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48CEA3723B9946E0070F0AB /* SceneDelegate.swift */; };
 		A48CEA3D23B9946E0070F0AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A48CEA3B23B9946E0070F0AB /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		A40B7D8323C62D5600F7BD83 /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		A40B7D8523C62F6100F7BD83 /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		A41703D523BCFD7B009A11EC /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		A47A24A323C8275E00A59FA9 /* Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Delegate.swift; sourceTree = "<group>"; };
 		A48CEA3223B9946E0070F0AB /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A48CEA3523B9946E0070F0AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A48CEA3723B9946E0070F0AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A47A24A223C8272F00A59FA9 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				A47A24A323C8275E00A59FA9 /* Delegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		A48CEA2923B9946E0070F0AB = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +99,7 @@
 		A48CEA3423B9946E0070F0AB /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				A47A24A223C8272F00A59FA9 /* Delegate */,
 				A4A5C44823BE680000E7DC06 /* Services */,
 				A4F1A9B123BB95160092DB09 /* Utilities */,
 				A4F7F62023BA9ABD00560028 /* Model */,
@@ -299,6 +310,7 @@
 				A40B7D8223C4F9B000F7BD83 /* UserDataService.swift in Sources */,
 				A48CEA3623B9946E0070F0AB /* AppDelegate.swift in Sources */,
 				A4F1A9B523BB99760092DB09 /* LogInVC.swift in Sources */,
+				A47A24A423C8275E00A59FA9 /* Delegate.swift in Sources */,
 				A40B7D8623C62F6100F7BD83 /* AvatarCell.swift in Sources */,
 				A4F7F62623BAA26900560028 /* GradientView.swift in Sources */,
 				A48CEA3823B9946E0070F0AB /* SceneDelegate.swift in Sources */,
