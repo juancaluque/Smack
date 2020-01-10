@@ -19,14 +19,14 @@ class CreateAccountVC: UIViewController {
     //Variables
     var avatarName = "profileDefault"
     var avatarColor = "[0.5, 0.5, 0.5, 1]"
+    var bell = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         if UserDataService.instance.avatarName != "" {
             userImage.image = UIImage(named: UserDataService.instance.avatarName)
             avatarName = UserDataService.instance.avatarName
@@ -55,6 +55,7 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func pickAvatarPressed(_ sender: Any) {
+        self.bell = "on"
         performSegue(withIdentifier: TO_AVATAR_PICKER, sender: nil)
     }
     
