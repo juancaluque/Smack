@@ -22,14 +22,28 @@ class ChannelVC: UIViewController {
         super.viewDidLoad()
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 60
         NotificationCenter.default.addObserver(self, selector: #selector(userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        setupUserInfo()
     }
 
     @IBAction func logInBtnPressed(_ sender: Any) {
-        performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        if AuthService.instance.isLoggedIn {
+            let profile = ProfileVC()
+            profile.modalPresentationStyle = .custom
+            present(profile, animated: true, completion: nil)
+        } else {
+            performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        }
     }
     
     @objc func userDataDidChange(_ notif: Notification) {
+        setupUserInfo()
+    }
+    
+    func setupUserInfo() {
         if AuthService.instance.isLoggedIn {
             logInBtn.setTitle(UserDataService.instance.name, for: .normal)
             userImage.image = UIImage(named: UserDataService.instance.avatarName)
@@ -40,8 +54,6 @@ class ChannelVC: UIViewController {
             userImage.backgroundColor = UIColor.clear
         }
     }
-    
-    
 
     
 
