@@ -117,7 +117,7 @@
                                 <rect key="frame" x="0.0" y="165" width="414" height="615.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ya8-yz-XbE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="ya8-yz-XbE" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ya8-yz-XbE" id="QX7-pv-LT3">
@@ -137,6 +137,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="1hg-Wa-7qx" id="szn-Wb-J1Q"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -180,6 +183,7 @@
                     </view>
                     <connections>
                         <outlet property="logInBtn" destination="3zA-fF-v9R" id="new-al-reP"/>
+                        <outlet property="tableView" destination="nar-Yg-kII" id="vyj-gC-4Y1"/>
                         <outlet property="userImage" destination="dze-Ys-ZeB" id="gFv-D3-M1D"/>
                         <segue destination="9jX-Ci-ZBP" kind="show" identifier="toLogin" id="uXd-vF-dsU"/>
                     </connections>
