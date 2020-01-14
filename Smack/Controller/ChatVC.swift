@@ -28,5 +28,6 @@ class ChatVC: UIViewController {
         MessageService.instance.findAllChannels { (success) in
             
         }
+        SocketsService.instance.establishConnection()
     }
 }
