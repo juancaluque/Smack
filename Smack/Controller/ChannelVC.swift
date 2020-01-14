@@ -17,7 +17,6 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
     
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +29,12 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         setupUserInfo()
+    }
+    
+    @IBAction func addChannelPressed(_ sender: Any) {
+        let addChannel = AddChannelVC()
+        addChannel.modalPresentationStyle = .custom
+        present(addChannel, animated: true, completion: nil)
     }
 
     @IBAction func logInBtnPressed(_ sender: Any) {
