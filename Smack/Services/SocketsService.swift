@@ -22,10 +22,12 @@ class SocketsService: NSObject {
     
     func establishConnection() {
         socket.connect()
+        print("connected")
     }
    
     func closeConnection() {
         socket.disconnect()
+        print("disconnected")
     }
     
     func addChannel(channelName: String, channelDescription: String, completion: @escaping CompletionHandler) {
