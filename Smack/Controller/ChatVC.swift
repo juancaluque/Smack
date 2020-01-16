@@ -14,11 +14,16 @@ class ChatVC: UIViewController {
     //OUTLETS
     @IBOutlet weak var menuBtn: UIButton!
     @IBOutlet weak var channelNameLbl: UILabel!
+    @IBOutlet weak var messageTxtBox: UITextField!
     
     
     //LIFECYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.bindToKeyboard()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tap)
+        
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
@@ -33,6 +38,22 @@ class ChatVC: UIViewController {
         }
     }
     
+    //@IBACTIONS
+    @IBAction func sendMsgPressed(_ sender: Any) {
+        if AuthService.instance.isLoggedIn{
+            guard let channelId = MessageService.instance.selectedChannel?.id else { return }
+            guard let message = messageTxtBox.text else { return }
+            
+            SocketsService.instance.addMessage(messageBody: message, userId: UserDataService.instance.id, channelId: channelId) { (success) in
+                if success {
+                    self.messageTxtBox.text = ""
+                    self.messageTxtBox.resignFirstResponder()
+                }
+            }
+        }
+    }
+    
+    
     //@OBJC FUNC
     @objc func userDataDidChange(_ notif: Notification) {
         if AuthService.instance.isLoggedIn {
@@ -44,6 +65,9 @@ class ChatVC: UIViewController {
     }
     @objc func channelSelected (_ notif: Notification) {
         updateWithChannel()
+    }
+    @objc func handleTap() {
+        view.endEditing(true)
     }
     
     //OTHER FUNC

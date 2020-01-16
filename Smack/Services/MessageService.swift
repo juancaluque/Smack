@@ -31,7 +31,6 @@ class MessageService {
                     let id = item["_id"].stringValue
                     let channel = Channel(channelTitle: name, channelDescription: channelDescription, id: id)
                     self.channels.append(channel)
-                    
                 }
                 NotificationCenter.default.post(name: NOTIF_CHANNELS_LOADED, object: nil)
                 completion(true)
@@ -67,19 +66,16 @@ class MessageService {
                         let message = Message(message: messageBody, channelId: channelId, userName: userName, userId: id, userAvatar: userAvatar, userAvatarColor: userAvatarColor, timeStamp: timeStamp)
                         self.messages.append(message)
                     }
-                    print("messages loaded!!!")
+                    print(MessageService.instance.messages)
                     completion(true)
                 }
             } else {
-                debugPrint(response.result.error as Any)
+                debugPrint("HERE IS THE BUG\(response.result.error as Any)")
                 completion(false)
             }
             
         }
     }
-    
-    
-    
     
     //Other func
     func clearChannel() {
