@@ -61,7 +61,7 @@ class MessageService {
                         let userName = item["userName"].stringValue
                         let userAvatar = item["userAvatar"].stringValue
                         let userAvatarColor = item["userAvatarColor"].stringValue
-                        let timeStamp = item["timeStapm"].stringValue
+                        let timeStamp = item["timeStamp"].stringValue
                         
                         let message = Message(message: messageBody, channelId: channelId, userName: userName, userId: id, userAvatar: userAvatar, userAvatarColor: userAvatarColor, timeStamp: timeStamp)
                         self.messages.append(message)
@@ -70,7 +70,7 @@ class MessageService {
                     completion(true)
                 }
             } else {
-                debugPrint("HERE IS THE BUG\(response.result.error as Any)")
+                debugPrint("HERE IS THE BUG \(response.result.error as Any)")
                 completion(false)
             }
             
