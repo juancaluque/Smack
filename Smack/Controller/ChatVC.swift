@@ -44,12 +44,21 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         NotificationCenter.default.addObserver(self, selector: #selector(userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
         
-        SocketsService.instance.getMessage { (success) in
-            if success{
+        SocketsService.instance.getMessage { (newMessage) in
+            if newMessage.channelId == MessageService.instance.selectedChannel?.id && AuthService.instance.isLoggedIn {
+                MessageService.instance.messages.append(newMessage)
                 self.tableView.reloadData()
                 self.scrollToRow()
             }
         }
+        
+        
+//        SocketsService.instance.getMessage { (success) in
+//            if success{
+//                self.tableView.reloadData()
+//                self.scrollToRow()
+//            }
+//        }
         
         SocketsService.instance.getTypingUser { (typingUsers) in
             guard let channelId = MessageService.instance.selectedChannel?.id else { return }
