@@ -70,6 +70,9 @@
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="messageBoxEditing:" destination="Jok-pJ-wAv" eventType="editingChanged" id="zQ9-CO-Xki"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IA5-wM-bDD">
                                 <rect key="frame" x="376" y="827" width="30" height="30"/>
@@ -79,7 +82,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="07l-Pp-iYp">
-                                <rect key="frame" x="0.0" y="129" width="414" height="663"/>
+                                <rect key="frame" x="0.0" y="121" width="414" height="671"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="80" id="LAY-M7-QDO" customClass="MessageCell" customModule="Smack" customModuleProvider="target">
@@ -148,7 +151,7 @@
                             <constraint firstItem="nwL-n5-O8Z" firstAttribute="bottom" secondItem="UbP-zq-pdf" secondAttribute="bottom" id="QjV-bm-iQt"/>
                             <constraint firstItem="nwL-n5-O8Z" firstAttribute="trailing" secondItem="UbP-zq-pdf" secondAttribute="trailing" id="X9I-1G-gHz"/>
                             <constraint firstItem="UbP-zq-pdf" firstAttribute="leading" secondItem="nwL-n5-O8Z" secondAttribute="leading" id="fOe-Uq-P1M"/>
-                            <constraint firstItem="07l-Pp-iYp" firstAttribute="top" secondItem="6Ec-FU-1Xx" secondAttribute="bottom" constant="8" symbolic="YES" id="hqA-5R-EC2"/>
+                            <constraint firstItem="07l-Pp-iYp" firstAttribute="top" secondItem="6Ec-FU-1Xx" secondAttribute="bottom" id="hqA-5R-EC2"/>
                             <constraint firstItem="07l-Pp-iYp" firstAttribute="leading" secondItem="nwL-n5-O8Z" secondAttribute="leading" id="i1d-bc-7ca"/>
                             <constraint firstItem="nwL-n5-O8Z" firstAttribute="trailing" secondItem="IA5-wM-bDD" secondAttribute="trailing" constant="8" id="nCU-1y-iyC"/>
                             <constraint firstItem="IA5-wM-bDD" firstAttribute="centerY" secondItem="UbP-zq-pdf" secondAttribute="centerY" id="oQ7-fb-pbL"/>
@@ -160,6 +163,7 @@
                         <outlet property="channelNameLbl" destination="OtT-0h-1Qb" id="L0F-6i-4eo"/>
                         <outlet property="menuBtn" destination="ZoN-4I-NQg" id="G6C-vF-SI4"/>
                         <outlet property="messageTxtBox" destination="UbP-zq-pdf" id="5dt-J0-9e0"/>
+                        <outlet property="sendBtn" destination="IA5-wM-bDD" id="XDo-QB-Zpm"/>
                         <outlet property="tableView" destination="07l-Pp-iYp" id="p75-DJ-6gs"/>
                     </connections>
                 </viewController>
@@ -207,7 +211,7 @@
                                 <rect key="frame" x="0.0" y="165" width="414" height="615.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" translatesAutoresizingMaskIntoConstraints="NO" id="ya8-yz-XbE" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" translatesAutoresizingMaskIntoConstraints="NO" id="ya8-yz-XbE" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ya8-yz-XbE" id="QX7-pv-LT3">
