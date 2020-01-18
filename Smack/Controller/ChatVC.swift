@@ -52,14 +52,6 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         }
         
-        
-//        SocketsService.instance.getMessage { (success) in
-//            if success{
-//                self.tableView.reloadData()
-//                self.scrollToRow()
-//            }
-//        }
-        
         SocketsService.instance.getTypingUser { (typingUsers) in
             guard let channelId = MessageService.instance.selectedChannel?.id else { return }
             var names = ""
@@ -193,5 +185,4 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return MessageService.instance.messages.count
     }
-    
 }
