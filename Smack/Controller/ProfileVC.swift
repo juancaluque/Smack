@@ -19,6 +19,7 @@ class ProfileVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
+        NotificationCenter.default.addObserver(self, selector: #selector(usernameDidChange), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
     }
     
     @IBAction func closeModalPressed(_ sender: Any) {
@@ -37,7 +38,7 @@ class ProfileVC: UIViewController {
         updateUsernameVC.modalPresentationStyle = .custom
         present(updateUsernameVC, animated: true, completion: nil)
     }
-    
+
     func setupView() {
         userName.text = UserDataService.instance.name
         userEmail.text = UserDataService.instance.email
@@ -49,5 +50,8 @@ class ProfileVC: UIViewController {
 
     @objc func closeTap(_ recognizer: UITapGestureRecognizer){
         dismiss(animated: true, completion: nil)
+    }
+    @objc func usernameDidChange() {
+        setupView()
     }
 }

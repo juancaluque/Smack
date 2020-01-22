@@ -32,10 +32,10 @@ class UpdateUsernameVC: UIViewController {
             
             AuthService.instance.updateUsername(newUsername: newUsername) { (success) in
                 if success {
-                    print(UserDataService.instance.name)
+                    self.dismiss(animated: true, completion: nil)
                 }
             }
-            dismiss(animated: true, completion: nil)
+            NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
         }
     }
     

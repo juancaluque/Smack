@@ -136,16 +136,19 @@ class AuthService {
         let newUsername = UserDataService.instance.name
         
         let body: [String: Any] = [
-            "name" : newUsername
+            "name": newUsername,
+            "email": UserDataService.instance.email ,
+            "avatarName": UserDataService.instance.avatarName,
+            "avatarColor": UserDataService.instance.avatarColor
         ]
             
             
         Alamofire.request("\(URL_UPDATE_USERNAME)\(UserDataService.instance.id)", method: .put, parameters: body, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
-            if response.result.error != nil {
-
+            if response.result.error == nil {
+                completion(true)
             } else {
                 completion(false)
-                debugPrint(response.result.error as Any)
+                debugPrint("HERE IS THE ERROR\(response.result.error as Any)")
             }
         }
     }
