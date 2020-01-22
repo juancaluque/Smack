@@ -89,7 +89,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //@IBACTIONS
     @IBAction func sendMsgPressed(_ sender: Any) {
-        if AuthService.instance.isLoggedIn{
+        if AuthService.instance.isLoggedIn && messageTxtBox.text != ""{
             guard let channelId = MessageService.instance.selectedChannel?.id else { return }
             guard let message = messageTxtBox.text else { return }
             
@@ -167,7 +167,6 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.tableView.scrollToRow(at: endIndex, at: .bottom, animated: false)
         }
     }
-    
     
     //TABLE FUNC
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
