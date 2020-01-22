@@ -30,6 +30,10 @@ class UserDataService {
         self.avatarName = avatarName
     }
     
+    func updateName(name: String) {
+        self.name = name
+    }
+    
     func returnUIColor(components: String) -> UIColor {
         
         let scanner = Scanner(string: components)

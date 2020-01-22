@@ -31,6 +31,13 @@ class ProfileVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func updateBtnPressed(_ sender: Any) {
+        let updateUsernameVC = UpdateUsernameVC()
+        
+        updateUsernameVC.modalPresentationStyle = .custom
+        present(updateUsernameVC, animated: true, completion: nil)
+    }
+    
     func setupView() {
         userName.text = UserDataService.instance.name
         userEmail.text = UserDataService.instance.email
@@ -39,10 +46,7 @@ class ProfileVC: UIViewController {
         let closetTouch = UITapGestureRecognizer(target: self, action: #selector(closeTap(_:)))
         bgView.addGestureRecognizer(closetTouch)
     }
-    
-    
-    
-    
+
     @objc func closeTap(_ recognizer: UITapGestureRecognizer){
         dismiss(animated: true, completion: nil)
     }

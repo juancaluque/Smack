@@ -33,6 +33,8 @@
 		A4A5C44A23BE681700E7DC06 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A5C44923BE681700E7DC06 /* AuthService.swift */; };
 		A4A5C44C23BFE3C800E7DC06 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A5C44B23BFE3C800E7DC06 /* RoundedButton.swift */; };
 		A4ABC26123CD4B7300992441 /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ABC26023CD4B7300992441 /* ChannelCell.swift */; };
+		A4D7752C23D8D67700CEE121 /* UpdateUsernameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D7752A23D8D67700CEE121 /* UpdateUsernameVC.swift */; };
+		A4D7752D23D8D67700CEE121 /* UpdateUsernameVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4D7752B23D8D67700CEE121 /* UpdateUsernameVC.xib */; };
 		A4F1A9B323BB95330092DB09 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A9B223BB95330092DB09 /* Constants.swift */; };
 		A4F1A9B523BB99760092DB09 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1A9B423BB99760092DB09 /* LogInVC.swift */; };
 		A4F7F62223BA9ADA00560028 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F7F62123BA9ADA00560028 /* ChatVC.swift */; };
@@ -74,6 +76,8 @@
 		A4A5C44923BE681700E7DC06 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		A4A5C44B23BFE3C800E7DC06 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		A4ABC26023CD4B7300992441 /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
+		A4D7752A23D8D67700CEE121 /* UpdateUsernameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUsernameVC.swift; sourceTree = "<group>"; };
+		A4D7752B23D8D67700CEE121 /* UpdateUsernameVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UpdateUsernameVC.xib; sourceTree = "<group>"; };
 		A4F1A9B223BB95330092DB09 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A4F1A9B423BB99760092DB09 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		A4F7F62123BA9ADA00560028 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			children = (
 				A444D58323CA87F10029E43A /* ProfileVC.xib */,
 				A490672E23CD6E88004C3675 /* AddChannelVC.xib */,
+				A4D7752B23D8D67700CEE121 /* UpdateUsernameVC.xib */,
 			);
 			path = XIBs;
 			sourceTree = "<group>";
@@ -190,6 +195,7 @@
 				A40B7D8323C62D5600F7BD83 /* AvatarPickerVC.swift */,
 				A444D58223CA87F10029E43A /* ProfileVC.swift */,
 				A490672D23CD6E88004C3675 /* AddChannelVC.swift */,
+				A4D7752A23D8D67700CEE121 /* UpdateUsernameVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -296,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A490673023CD6E88004C3675 /* AddChannelVC.xib in Resources */,
+				A4D7752D23D8D67700CEE121 /* UpdateUsernameVC.xib in Resources */,
 				A444D58523CA87F10029E43A /* ProfileVC.xib in Resources */,
 				A48CEA4223B994700070F0AB /* LaunchScreen.storyboard in Resources */,
 				A48CEA3F23B994700070F0AB /* Assets.xcassets in Resources */,
@@ -357,6 +364,7 @@
 				A40B7D8223C4F9B000F7BD83 /* UserDataService.swift in Sources */,
 				A40D176A23CD359200B55C43 /* MessageService.swift in Sources */,
 				A4ABC26123CD4B7300992441 /* ChannelCell.swift in Sources */,
+				A4D7752C23D8D67700CEE121 /* UpdateUsernameVC.swift in Sources */,
 				A48CEA3623B9946E0070F0AB /* AppDelegate.swift in Sources */,
 				A490672F23CD6E88004C3675 /* AddChannelVC.swift in Sources */,
 				A4F1A9B523BB99760092DB09 /* LogInVC.swift in Sources */,
