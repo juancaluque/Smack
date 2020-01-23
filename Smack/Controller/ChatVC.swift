@@ -24,6 +24,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     //LIFECYCLE
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.bindToKeyboard()
@@ -86,7 +87,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
-    
+        
     //@IBACTIONS
     @IBAction func sendMsgPressed(_ sender: Any) {
         if AuthService.instance.isLoggedIn && messageTxtBox.text != ""{
@@ -168,6 +169,13 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
+    func scrollToLast() {
+        let lastCell = MessageService.instance.messages.count
+        let index = IndexPath(row: lastCell, section: 0)
+        
+        self.tableView.scrollToRow(at: index, at: .bottom, animated: false)
+    }
+ 
     //TABLE FUNC
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as? MessageCell {
